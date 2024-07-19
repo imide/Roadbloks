@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/eslint',
+    'shadcn-nuxt',
   ],
 
   experimental: {
@@ -29,11 +30,6 @@ export default defineNuxtConfig({
         target: 'esnext',
       },
     },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
-    },
   },
 
   devtools: {
@@ -49,5 +45,9 @@ export default defineNuxtConfig({
     config: {
       standalone: false,
     },
+  },
+
+  imports: {
+    autoImport: true,
   },
 })
