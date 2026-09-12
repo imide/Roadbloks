@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         
       - name: Install system dependencies
         run: |
@@ -30,7 +30,7 @@ jobs:
           override: true
       
       - name: Set up cargo cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         continue-on-error: false
         with:
           path: |
