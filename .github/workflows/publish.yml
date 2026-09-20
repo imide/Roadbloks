@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install webkit2gtk (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
@@ -38,7 +38,7 @@ jobs:
         run: bun install
           
       - name: Build 🔧
-        uses: tauri-apps/tauri-action@v0
+        uses: tauri-apps/tauri-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
